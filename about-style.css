@@ -1,0 +1,23 @@
+main{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+main h1{
+    margin-top: 20vh;
+    color: black
+}
+
+.title-container{
+    background: linear-gradient(53deg, rgba(169, 178, 255, 1) 0%, rgba(246, 233, 255, 1) 50%, rgba(255, 204, 243, 1) 100%);
+    border: transparent;
+    border-radius: 20px;
+    width: 25vw;
+    margin-left: 33vw;
+}
+
+.text-container{
+    color: #f1f3ff;
+    font-size: 30px;
+}

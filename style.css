@@ -150,3 +150,67 @@ main {
 .disappear span:nth-child(9) { animation-delay: 4.8s; }
 .disappear span:nth-child(10) { animation-delay: 5.4s; }
 .disappear span:nth-child(11) { animation-delay: 6s; }
+
+
+/* Responsive design */
+@media (max-width: 768px) {
+    header {
+        height: 10vh;
+    }
+
+    .nav-logo {
+        width: 45px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.5em;
+    }
+
+    .about-us {
+        padding: .5em 1em;
+        font-size: 13px;
+    }
+
+    .main-logo {
+        width: 70%;
+        max-width: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 160px;
+        padding-bottom: 100px;
+    }
+
+    main {
+        font-size: 4vw;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        height: 8vh;
+    }
+
+    .nav-logo {
+        width: 35px;
+    }
+
+    .about-us {
+        padding: .5em 0.5em;
+        font-size: 12px;
+    }
+
+    .main-logo {
+        width: 80%;
+        max-width: 150px;
+    }
+
+    main {
+        font-size: 5vw;
+    }
+
+    nav ul {
+        gap: 0.5em;
+    }
+}

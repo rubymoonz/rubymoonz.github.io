@@ -1,0 +1,161 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra verticalmente todo el contenido del body */
+    align-items: center; /* Centra horizontalmente todo el contenido del body */
+    height: 100vh;
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+    padding-bottom: 70px; 
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 80%; /* Controla el ancho de la card */
+    overflow: hidden;
+    border-radius: 10px;
+    font-family: "Poppins", sans-serif;
+    color: #1E1E1E;
+    margin: 2vh auto;
+    position: relative;
+    z-index: 0; /* Asegura que los elementos absolutos se posicionen relativamente a este contenedor */
+}
+
+.card-header {
+    padding: 20px;
+    background-color: #FFCDF2; /* Color de fondo del header */
+    color: black; 
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.card-header h1{
+    margin-left: 2vw;
+}
+
+main, .article {
+    padding-top: 12vh; 
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin: 20px auto;
+    border-radius: 10px;
+    position: relative; /* Importante para controlar el stacking con z-index */
+    z-index: 0; /* Para asegurar que el card no se superpone con elementos con mayor z-index */
+}
+
+.follow {
+    cursor: pointer;
+    background-color: #ff8edb;
+    color: white;
+    margin-right: 6vw;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.8rem; /* Ajustar tamaño de texto si es necesario */
+}
+
+.card-body {
+    display: flex;
+    width: 100%;
+    padding-top: 60px;
+}
+
+.info {
+    margin-top: 8vh;
+    padding: 20px;
+    width: 50%; /* Ajustar si es necesario según el diseño */
+}
+
+.info li{
+    font-size: 14px;
+}
+
+.profile-pic {
+    width: 50%; /* Ajustar si es necesario */
+}
+
+.profile-pic img {
+    margin-top: 10vh;
+    display: block;
+    border-radius: 0 10px 10px 0; 
+    width:500px;
+    height:500px;
+    object-fit: cover;
+    margin-left: -4vw;
+}
+
+.info p {
+    margin: 10px 0;
+    font-size: 0.9rem; /* Ajustar tamaño de texto si es necesario */
+}
+
+
+/* Responsive design */
+@media (min-width: 992px) {
+    .card {
+        width: 80%;
+    }
+    .profile-pic img {
+        width: 500px;
+        height: 500px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .card {
+        width: 90%;
+    }
+    .profile-pic img {
+        width: 300px;
+        height: 300px;
+    }
+    .card-header, .card-body {
+        flex-direction: column;
+        text-align: center;
+    }
+    .follow {
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 767px) {
+    body {
+        padding-bottom: 20px; /* Menor padding en móviles */
+    }
+    .card {
+        width: 95%;
+        flex-direction: column; /* Cambia la orientación para mejor visualización */
+    }
+    .profile-pic, .info {
+        width: 100%; /* Ajusta los elementos internos para ocupar todo el ancho */
+    }
+    .profile-pic img {
+        width: 100%; /* Imagen se ajusta al contenedor */
+        height: auto; /* Mantiene la proporción */
+        margin-top: 2vh;
+        margin-left: 0;
+    }
+    .info {
+        padding: 5%;
+        margin-top: 3vh;
+    }
+    .info p, .info li {
+        font-size: 12px; /* Texto más pequeño en móviles */
+    }
+}

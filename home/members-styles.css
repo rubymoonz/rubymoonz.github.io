@@ -1,0 +1,147 @@
+/* Contenedor de las tarjetas */
+.member-card-container {
+    display: flex;
+    flex-wrap: wrap; /* Ajusta el diseño de las tarjetas */
+    gap: 2vw;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    margin-top: 16vh;
+}
+
+/* Estilo para cada tarjeta */
+.member-card {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    width: 250px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+    -webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+    position: relative; /* Asegura que el desenfoque se aplique solo a los hijos */
+}
+
+/* Estilo para las imágenes dentro de cada tarjeta */
+.member-card img {
+    width: 100%;
+    height: auto;
+    transition: filter 0.3s ease-in-out; /* Suave transición para el desenfoque */
+}
+
+/* Aplica el desenfoque a todas las tarjetas que no están en hover */
+.member-card-container:hover .member-card {
+    filter: blur(3px); /* Desenfoque para las tarjetas no seleccionadas */
+}
+
+/* Elimina el desenfoque de la tarjeta en hover */
+.member-card-container .member-card:hover {
+    filter: blur(0);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Intensificar la sombra */
+    transform: translateY(-10px); 
+}   
+
+/* Elimina el desenfoque de las imágenes dentro de la tarjeta en hover */
+.member-card-container .member-card:hover img {
+    filter: blur(0);
+}
+
+/* Estilo para el enlace del botón */
+.button-link {
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    color: inherit; /* Hereda el color del texto del botón */
+}
+
+.button-link button {
+    background-color: #FFCDF2;
+    border: transparent;
+    border-radius: 10px;
+    padding: .5em 4em;
+    color: black;
+    cursor: pointer; 
+    font-size: 16px; 
+    transition: background-color 0.3s ease; 
+}
+
+.button-link button:hover {
+    background-color: #ff8edb; 
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .member-card-container {
+        gap: 1.5vw;
+        margin-top: 10vh;
+    }
+
+    .member-card {
+        width: 200px; /* Ajusta el tamaño de la tarjeta en pantallas más pequeñas */
+    }
+
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-logo {
+        width: 45px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.5em;
+        text-align: center;
+    }
+
+    .main-logo {
+        width: 70%;
+        max-width: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 160px;
+        padding-bottom: 100px;
+    }
+
+    main {
+        font-size: 4vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .member-card-container {
+        gap: 1vw;
+        margin-top: 5vh;
+    }
+
+    .member-card {
+        width: 180px; /* Ajusta aún más el tamaño de la tarjeta en pantallas pequeñas */
+    }
+
+    header {
+        height: 8vh;
+    }
+
+    .nav-logo {
+        width: 35px;
+    }
+
+    .about-us {
+        padding: .5em 0.5em;
+        font-size: 12px;
+    }
+
+    .main-logo {
+        width: 80%;
+        max-width: 150px;
+    }
+
+    main {
+        font-size: 5vw;
+    }
+
+    nav ul {
+        gap: 0.5em;
+        font-size: 14px; /* Ajusta el tamaño de la fuente de navegación */
+    }
+}

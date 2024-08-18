@@ -1,7 +1,7 @@
-/* Contenedor de las tarjetas */
+/* Contenedor */
 .member-card-container {
     display: flex;
-    flex-wrap: wrap; /* Ajusta el diseño de las tarjetas */
+    flex-wrap: wrap; 
     gap: 2vw;
     align-items: center;
     justify-content: center;
@@ -9,7 +9,7 @@
     margin-top: 16vh;
 }
 
-/* Estilo para cada tarjeta */
+/*  cada card */
 .member-card {
     background-color: #fff;
     padding: 10px;
@@ -19,37 +19,34 @@
     text-align: center;
     -webkit-transition: .3s ease-in-out;
 	transition: .3s ease-in-out;
-    position: relative; /* Asegura que el desenfoque se aplique solo a los hijos */
+    position: relative; /* asegura que el desenfoque se aplique solo a los hijos */
 }
 
-/* Estilo para las imágenes dentro de cada tarjeta */
+/* las imágenes dentro de cada card */
 .member-card img {
     width: 100%;
     height: auto;
-    transition: filter 0.3s ease-in-out; /* Suave transición para el desenfoque */
+    transition: filter 0.3s ease-in-out; 
 }
 
-/* Aplica el desenfoque a todas las tarjetas que no están en hover */
+/* desenfoque a todas las cards */
 .member-card-container:hover .member-card {
-    filter: blur(3px); /* Desenfoque para las tarjetas no seleccionadas */
+    filter: blur(3px); 
 }
 
-/* Elimina el desenfoque de la tarjeta en hover */
 .member-card-container .member-card:hover {
     filter: blur(0);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Intensificar la sombra */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
     transform: translateY(-10px); 
 }   
 
-/* Elimina el desenfoque de las imágenes dentro de la tarjeta en hover */
 .member-card-container .member-card:hover img {
     filter: blur(0);
 }
 
-/* Estilo para el enlace del botón */
 .button-link {
-    text-decoration: none; /* Elimina el subrayado del enlace */
-    color: inherit; /* Hereda el color del texto del botón */
+    text-decoration: none; 
+    color: inherit; 
 }
 
 .button-link button {
@@ -75,7 +72,7 @@
     }
 
     .member-card {
-        width: 200px; /* Ajusta el tamaño de la tarjeta en pantallas más pequeñas */
+        width: 200px; 
     }
 
     header {
@@ -115,7 +112,7 @@
     }
 
     .member-card {
-        width: 180px; /* Ajusta aún más el tamaño de la tarjeta en pantallas pequeñas */
+        width: 180px; 
     }
 
     header {
@@ -142,6 +139,6 @@
 
     nav ul {
         gap: 0.5em;
-        font-size: 14px; /* Ajusta el tamaño de la fuente de navegación */
+        font-size: 14px; 
     }
 }
